@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Trabalho AGEP</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Plano de Trabalho AGEP</h1>
+    </header>
+    <form id="agep-form">
+        <section id="identification">
+            <h2>Identification</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </section>
+        <section id="self-assessment">
+            <h2>Self-assessment</h2>
+            <textarea id="self-assessment-text" name="self-assessment" rows="4" required></textarea>
+        </section>
+        <section id="swot-matrix">
+            <h2>SWOT Matrix</h2>
+            <textarea id="swot-strengths" name="strengths" placeholder="Strengths" rows="3"></textarea>
+            <textarea id="swot-weaknesses" name="weaknesses" placeholder="Weaknesses" rows="3"></textarea>
+            <textarea id="swot-opportunities" name="opportunities" placeholder="Opportunities" rows="3"></textarea>
+            <textarea id="swot-threats" name="threats" placeholder="Threats" rows="3"></textarea>
+        </section>
+        <section id="action-plan">
+            <h2>Action Plan</h2>
+            <div id="activities">
+                <div class="activity">
+                    <label for="activity1">Activity 1:</label>
+                    <input type="text" id="activity1" name="activities[]" required>
+                </div>
+                <div class="activity">
+                    <label for="activity2">Activity 2:</label>
+                    <input type="text" id="activity2" name="activities[]" required>
+                </div>
+                <div class="activity">
+                    <label for="activity3">Activity 3:</label>
+                    <input type="text" id="activity3" name="activities[]" required>
+                </div>
+            </div>
+            <button type="button" id="add-activity">Add Activity</button>
+        </section>
+        <section id="temporality">
+            <h2>Temporality</h2>
+            <input type="date" id="start-date" name="start-date" required>
+            <input type="date" id="end-date" name="end-date" required>
+        </section>
+        <section id="resources">
+            <h2>Resources</h2>
+            <textarea id="resources-text" name="resources" rows="4" required></textarea>
+        </section>
+        <section id="tcle-consent">
+            <h2>TCLE Consent</h2>
+            <label>
+                <input type="checkbox" id="tcle-consent-checkbox" name="tcle-consent" required>
+                I consent to the TCLE
+            </label>
+        </section>
+        <button type="submit">Generate Document</button>
+    </form>
+</body>
+</html>
